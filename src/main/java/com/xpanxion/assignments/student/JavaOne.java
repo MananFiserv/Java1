@@ -66,6 +66,19 @@ public class JavaOne {
 
     public void ex5() {
         System.out.println("Student 1: ex5.");
+        Scanner console = new Scanner(System.in);
+        System.out.println("Enther a string: ");
+        String sentence = console.nextLine();
+        int vowel = 0;
+        for (int i = 0; i < sentence.length(); i++){
+            if(sentence.charAt(i) == 'a' || sentence.charAt(i) == 'e' || sentence.charAt(i) == 'i' ||
+                    sentence.charAt(i) == 'o' || sentence.charAt(i) == 'u'  ){
+                vowel++;
+            }
+        }
+        System.out.println("Number of vowels: "+ vowel);
+        int consonants = sentence.length() - vowel;
+        System.out.println("Number of consonants: "+ consonants);
     }
 
     public void ex6() {
