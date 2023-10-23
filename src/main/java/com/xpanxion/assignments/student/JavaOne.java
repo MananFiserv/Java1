@@ -1,5 +1,7 @@
 package com.xpanxion.assignments.student;
 
+import java.util.Scanner;
+
 public class JavaOne {
 
     //
@@ -20,6 +22,18 @@ public class JavaOne {
 
     public void ex2() {
         System.out.println("Student 1: ex2.");
+        Scanner console = new Scanner(System.in);
+        System.out.println("Enther a string: ");
+        String sentence = console.nextLine();
+        int count = 0;
+        for (int i = 0; i < sentence.length(); i++){
+            if(Character.isUpperCase(sentence.charAt(i))){
+                count++;
+
+            }
+        }
+        System.out.println("Number of uppercase letters: "+ count);
+
     }
 
     public void ex3() {
