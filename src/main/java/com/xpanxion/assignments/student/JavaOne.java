@@ -51,6 +51,17 @@ public class JavaOne {
 
     public void ex4() {
         System.out.println("Student 1: ex4.");
+        Scanner console = new Scanner(System.in);
+        System.out.println("Enther a string: ");
+        String sentence = console.nextLine();
+        sentence.toLowerCase();
+        for(int i = 0; i < (sentence.length()/2) ; i++){
+            if(sentence.charAt(i) != sentence.charAt(sentence.length()-i-1)){
+                System.out.println("NO");
+                return;
+            }
+        }
+        System.out.println("YES");
     }
 
     public void ex5() {
