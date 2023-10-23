@@ -38,6 +38,15 @@ public class JavaOne {
 
     public void ex3() {
         System.out.println("Student 1: ex3.");
+        Scanner console = new Scanner(System.in);
+        System.out.println("Enther a string: ");
+        String sentence = console.nextLine();
+        String[] Stringtoken = sentence.split(" ");
+        for (int i = 0; i < Stringtoken.length; i++){
+            if(i%2 == 0) System.out.print(Stringtoken[i].toUpperCase()+ " ");
+            else System.out.print(Stringtoken[i]+ " ");
+        }
+
     }
 
     public void ex4() {
