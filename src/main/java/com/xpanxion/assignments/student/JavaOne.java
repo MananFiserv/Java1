@@ -83,6 +83,13 @@ public class JavaOne {
 
     public void ex6() {
         System.out.println("Student 1: ex6.");
+        int number1, number2;
+        Scanner console = new Scanner(System.in);
+        System.out.println("Enter first number: ");
+        number1 = console.nextInt();
+        System.out.println("Enter second number: ");
+        number2 = console.nextInt();
+        System.out.println("Result: "+ (number1+number2));
     }
 
     public void ex7() {
