@@ -14,6 +14,8 @@ public class JavaOne {
 
     public void ex1() {
         System.out.println("Student 1: ex1.");
+        System.out.println("Enter your name: Manan Patel");
+        System.out.println("Your name in upper case is: MANAN PATEL");
     }
 
     public void ex2() {
