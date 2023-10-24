@@ -10,9 +10,9 @@ public class Main {
 //        javaOne.ex3();
 //        javaOne.ex4();
 //        javaOne.ex5();
-        javaOne.ex6();
-//        javaOne.ex7();
-//        javaOne.ex8();
+//        javaOne.ex6();
+        javaOne.ex7();
+//        javaOne.ex8(2);
 //        javaOne.ex9();
 //        javaOne.ex10();
     }

@@ -94,10 +94,27 @@ public class JavaOne {
 
     public void ex7() {
         System.out.println("Student 1: ex7.");
+        Scanner console = new Scanner(System.in);
+        int number1, number2;
+        System.out.println("Enter first number: ");
+        number1 = console.nextInt();
+        System.out.println("Enter second number: ");
+        number2 = console.nextInt();
+        System.out.println("Enter operation (add, sub, mul, div): ");
+        String operation = console.next();
+
+        switch (operation) {
+            case "add" -> System.out.println("Result: " + (number1 + number2));
+            case "sub" -> System.out.println("Result: " + (number1 - number2));
+            case "mul" -> System.out.println("Result: " + (number1 * number2));
+            case "div" -> System.out.println("Result: " + (number1 / number2));
+            default -> System.out.println("Invalid command");
+        }
     }
 
     public void ex8() {
         System.out.println("Student 1: ex8.");
+
     }
 
     public void ex9() {
