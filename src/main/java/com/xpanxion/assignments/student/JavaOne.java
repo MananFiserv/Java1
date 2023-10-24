@@ -2,6 +2,8 @@ package com.xpanxion.assignments.student;
 
 import java.util.Scanner;
 
+import static java.lang.Integer.parseInt;
+
 public class JavaOne {
 
     //
@@ -114,6 +116,23 @@ public class JavaOne {
 
     public void ex8() {
         System.out.println("Student 1: ex8.");
+        Scanner console = new Scanner(System.in);
+        int price;
+        System.out.println("Enter the price: ");
+        price = console.nextInt();
+        int cost = 0;
+        String dimension = "";
+        while(true){
+            console.nextLine();
+            System.out.println("Enter the room dimensions (widthxheight)");
+            dimension = console.nextLine().toLowerCase();
+            if(dimension.equals("done")){
+                break;
+            }
+           String[] stringtoken = dimension.split(" x ");
+            cost += (Integer.parseInt(stringtoken[0])*Integer.parseInt(stringtoken[1])*price);
+        }
+        System.out.println("Total cost: "+ cost);
 
     }
 
