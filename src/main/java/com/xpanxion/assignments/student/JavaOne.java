@@ -1,7 +1,7 @@
 package com.xpanxion.assignments.student;
 
 import java.util.Scanner;
-
+import java.util.Random;
 import static java.lang.Integer.parseInt;
 
 public class JavaOne {
@@ -138,6 +138,22 @@ public class JavaOne {
 
     public void ex9() {
         System.out.println("Student 1: ex9.");
+        Scanner console = new Scanner(System.in);
+        Random random = new Random();
+        int int_random = random.nextInt((5-1)+1)+1;
+        System.out.println("Enter a number: ");
+        int guess = console.nextInt();
+        while(true){
+            if(guess==int_random){
+                break;
+            }
+            System.out.println("Try again ..");
+            System.out.println("Enter a number: ");
+            guess = console.nextInt();
+
+
+        }
+        System.out.println("You guessed it!!!");
     }
 
     public void ex10() {
