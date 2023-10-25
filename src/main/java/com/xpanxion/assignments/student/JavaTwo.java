@@ -1,15 +1,14 @@
 package com.xpanxion.assignments.student;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.*;
 
 public class JavaTwo {
     Scanner console = new Scanner(System.in);
+    ArrayList<Person> personArrayList = new ArrayList<>();
     public void ex1(){
 
         String person;
-        ArrayList<Person> personArrayList = new ArrayList<>();
+
         while(true){
             System.out.println("Enter person");
             person = console.nextLine();
@@ -25,6 +24,26 @@ public class JavaTwo {
         }
     }
     public void ex2(){
+        Map<Integer, Person> hashPerson = new HashMap<>();
+        Person person1 = new Person(1, "Peter", "Jones");
+        Person person2 = new Person(2, "John", "Smith");
+        Person person3 = new Person(3, "Mary", "Jane");
 
+        hashPerson.put(person1.getId(), person1);
+        hashPerson.put(person2.getId(), person2);
+        hashPerson.put(person3.getId(), person3);
+
+        while(true){
+            System.out.println("Enter Person ID:");
+            String id = console.next();
+            if(id.equals("done")){
+                break;
+            }
+            if(hashPerson.containsKey(Integer.parseInt(id))){
+                System.out.println(hashPerson.get(Integer.parseInt(id)));
+            }else {
+                System.out.println("No Person associated with the "+ id);
+            }
+        }
     }
 }

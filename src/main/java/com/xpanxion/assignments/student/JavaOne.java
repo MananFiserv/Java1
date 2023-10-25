@@ -31,7 +31,6 @@ public class JavaOne {
         for (int i = 0; i < sentence.length(); i++){
             if(Character.isUpperCase(sentence.charAt(i))){
                 count++;
-
             }
         }
         System.out.println("Number of uppercase letters: "+ count);
@@ -162,16 +161,15 @@ public class JavaOne {
         System.out.println("Enter a String: ");
         String sentence = console.nextLine();
         String[] stringtoken = sentence.split(" ");
-        int counter;
+
         for (int i = 0; i < stringtoken.length; i++){
-            counter = 0;
             for (int j = 0; j < stringtoken[i].length(); j++){
                 for(int k = 0; k < stringtoken[i].length();k++){
                     if(k==j){
                         break;
                     }
                             System.out.print(" ");
-                            counter++;
+
                         }
                 System.out.println(stringtoken[i].charAt(j));
             }
