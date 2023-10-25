@@ -58,4 +58,34 @@ public class JavaTwo {
     public void ex4(){
         ex3();
     }
+    public void ex5(){
+        var repository = new Repository();
+        var p = repository.getPerson();
+        System.out.println(p);
+    }
+    public void ex6(){
+        String number1;
+        int number2;
+
+
+        while (true){
+            System.out.println("Enter first number: ");
+            number1 = console.next().toLowerCase();
+            if (number1.equals("done")) break;
+            System.out.println("Enter second number: ");
+            number2 = console.nextInt();
+            System.out.println("Enter operation (add, sub, mul, div): ");
+            String operation = console.next();
+            switch (operation) {
+                case "add" -> Calculator.add(Integer.parseInt(number1), number2);
+                case "sub" -> Calculator.subtract(Integer.parseInt(number1), number2);
+                case "mul" -> Calculator.multiply(Integer.parseInt(number1), number2);
+                case "div" -> Calculator.divide(Integer.parseInt(number1), number2);
+                default -> System.out.println("Invalid command");
+            }
+        }
+        for (int i = 0; i < Calculator.history.size(); i++){
+            System.out.println(Calculator.history.get(i));
+        }
+    }
 }
