@@ -56,6 +56,6 @@ public class JavaTwo {
         System.out.println("Total cost: " + formatter.format(invoice.getTotalCost()));
     }
     public void ex4(){
-        ex2();
+        ex3();
     }
 }
