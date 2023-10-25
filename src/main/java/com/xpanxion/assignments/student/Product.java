@@ -1,21 +1,19 @@
 package com.xpanxion.assignments.student;
 
-public class Product {
-    private int Id;
+public class Product extends Base {
     private String name;
     private double price;
 
     @Override
     public String toString() {
         return "Product{" +
-                "Id=" + Id +
+                "Id=" + super.getId() +
                 ", name='" + name + '\'' +
                 ", price=" + price +
                 '}';
     }
 
-    public Product() {
-    }
+
 
     public String getName() {
         return name;
@@ -26,12 +24,9 @@ public class Product {
     }
 
     public int getId() {
-        return Id;
+        return super.getId();
     }
 
-    public void setId(int id) {
-        Id = id;
-    }
 
     public double getPrice() {
         return price;
@@ -42,7 +37,7 @@ public class Product {
     }
 
     public Product(int id, String name, double price) {
-        Id = id;
+        super(id);
         this.name = name;
 
         this.price = price;

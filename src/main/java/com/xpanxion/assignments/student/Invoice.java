@@ -3,10 +3,11 @@ package com.xpanxion.assignments.student;
 import java.util.ArrayList;
 import java.util.PrimitiveIterator;
 
-public class Invoice {
+public class Invoice extends Base{
     private ArrayList<Product> invoiceList;
 
     public Invoice(int n){
+        super(n);
         this.invoiceList = new ArrayList<>();
     }
     public void addProduct(Product n){
