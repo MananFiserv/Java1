@@ -158,9 +158,28 @@ public class JavaOne {
 
     public void ex10() {
         System.out.println("Student 1: ex10.");
+        Scanner console = new Scanner(System.in);
+        System.out.println("Enter a String: ");
+        String sentence = console.nextLine();
+        String[] stringtoken = sentence.split(" ");
+        int counter;
+        for (int i = 0; i < stringtoken.length; i++){
+            counter = 0;
+            for (int j = 0; j < stringtoken[i].length(); j++){
+                for(int k = 0; k < stringtoken[i].length();k++){
+                    if(k==j){
+                        break;
+                    }
+                            System.out.print(" ");
+                            counter++;
+                        }
+                System.out.println(stringtoken[i].charAt(j));
+            }
+        }
     }
 
     //
     // Private helper methods
     //
 }
+
