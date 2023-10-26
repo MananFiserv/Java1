@@ -126,7 +126,18 @@ public class JavaTwo {
             System.out.println(p);
         }
     }
-    public void ex10{
-        
+    public void ex10() throws InterruptedException{
+        Queue q = new Queue();
+        q.enqueue(new Cat("Alice"));
+        q.enqueue(new Cat("Bob"));
+        q.enqueue(new Cat("Charlie"));
+        q.enqueue(new Cat("Dan"));
+
+        while(!q.isEmpty()){
+            q.printQueue();
+            q.dequeue();
+            Thread.sleep(3000);
+
+        }
     }
 }
