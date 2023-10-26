@@ -1,6 +1,6 @@
 package com.xpanxion.assignments.student;
 
-public class Person {
+public class Person implements Comparable<Person> {
     private int id;
     private String firstName;
 
@@ -47,5 +47,10 @@ public class Person {
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Person person) {
+        return this.firstName.compareTo(person.getFirstName()   );
     }
 }

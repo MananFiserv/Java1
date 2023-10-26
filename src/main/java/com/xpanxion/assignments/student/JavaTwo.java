@@ -88,4 +88,25 @@ public class JavaTwo {
             System.out.println(Calculator.history.get(i));
         }
     }
+    public void ex7(){
+        var personList = Arrays.asList(
+                new Person(1, "Peter", "Jones"),
+                new Person(2, "John", "Smith"),
+                new Person(3, "Sue", "Anderson")
+        );
+
+        personList.stream().map(person -> new Person(person.getId(), person.getFirstName(), "xxx")).forEach(System.out::println);
+
+    }
+    public void ex8(){
+        var personList = Arrays.asList(
+                new Person(1,"Charlie" , "Jones"),
+                new Person(2,"Zoey" , "Smith"),
+                new Person(3,"Adam" , "Anderson")
+        );
+        Collections.sort(personList);
+        for (Person p: personList){
+            System.out.println(p);
+        }
+    }
 }
